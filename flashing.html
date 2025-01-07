@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update in Progress</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            width: 90%;
+            max-width: 400px;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #161b22;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+        .logo {
+            position: absolute;
+            top: -70px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 190px;
+        }
+        h1 {
+            font-size: 24px;
+            color: #58a6ff;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 14px;
+            color: #8b949e;
+            margin-bottom: 20px;
+        }
+        .spinner {
+            height: 30px;
+            width: 30px;
+            margin: 30px auto;
+            border: 5px solid #30363d;
+            border-top: 5px solid #58a6ff;
+            border-radius: 50%;
+            animation: spin 1s infinite linear;
+        }
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://static.gl-inet.com/www/images/press/gl-inet_white.png?_gl=1*1198wrr*_gcl_au*MjAxNDA3MTA4MS4xNzM1OTU4MzE0*_ga*MTMyNzc3MzIzMC4xNzM1OTU4MzE0*_ga_34T6Q5NL0V*MTczNjIzMTA2NS45LjEuMTczNjIzMTA3OC4wLjAuMA.." alt="GL.iNet Logo" class="logo">
+        <h1>Update in Progress</h1>
+        <div class="spinner"></div>
+        <p>Your file was successfully uploaded!.
+            <br>Please wait for the device to reset automatically.
+            <br>You can close this page.
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash U-Boot</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            width: 90%;
+            max-width: 400px;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #161b22;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+        .logo {
+            position: absolute;
+            top: -70px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 190px;
+        }
+        h1 {
+            font-size: 24px;
+            color: #58a6ff;
+            margin-bottom: 15px;
+        }
+        .warning {
+            font-size: 14px;
+            color: #ff7b72;
+            background-color: rgba(255, 123, 114, 0.1);
+            border: 1px solid rgba(255, 123, 114, 0.3);
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 14px;
+            color: #8b949e;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 10px 0;
+            font-size: 14px;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #238636;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #2ea043;
+        }
+        .file-label {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 10px 0;
+            font-size: 14px;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #30363d;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .file-label:hover {
+            background-color: #40474e;
+        }
+        input[type="file"] {
+            display: none;
+        }
+        a {
+            display: block;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #58a6ff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #1f6feb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://static.gl-inet.com/www/images/press/gl-inet_white.png?_gl=1*1198wrr*_gcl_au*MjAxNDA3MTA4MS4xNzM1OTU4MzE0*_ga*MTMyNzc3MzIzMC4xNzM1OTU4MzE0*_ga_34T6Q5NL0V*MTczNjIzMTA2NS45LjEuMTczNjIzMTA3OC4wLjAuMA.." alt="GL.iNet Logo" class="logo">
+        <h1>Flash U-Boot</h1>
+        <div class="warning">Caution: Flashing U-Boot is a critical operation. Uploading an incorrect file may brick your device.</div>
+        <p>Select the U-Boot file to flash:</p>
+        <form action="/flash-uboot" method="post" enctype="multipart/form-data">
+            <label for="uboot-file" class="file-label">Choose File</label>
+            <input type="file" id="uboot-file" name="uboot-file" accept=".bin" required>
+            <button type="submit" class="btn">Flash U-Boot</button>
+        </form>
+        <a href="index.html">Return to Home</a>
+    </div>
+</body>
+</html>

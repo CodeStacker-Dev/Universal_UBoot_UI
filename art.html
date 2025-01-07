@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ART Update</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            width: 90%;
+            max-width: 400px;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #161b22;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+        .logo {
+            position: absolute;
+            top: -70px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 190px;
+        }
+        h1 {
+            font-size: 24px;
+            color: #58a6ff;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 14px;
+            color: #8b949e;
+            margin-bottom: 20px;
+        }
+        .form-container {
+            margin-bottom: 20px;
+        }
+        input[type="file"], input[type="submit"], .btn {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 15px;
+            font-size: 14px;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #238636;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        input[type="file"] {
+            background-color: #30363d;
+        }
+        input[type="file"]:hover, input[type="submit"]:hover, .btn:hover {
+            background-color: #2ea043;
+        }
+        .warning {
+            margin-top: 20px;
+            color: #ff7b72;
+            background-color: rgba(255, 123, 114, 0.1);
+            border: 1px solid rgba(255, 123, 114, 0.3);
+            padding: 10px;
+            border-radius: 4px;
+            text-align: left;
+        }
+        .warning ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://static.gl-inet.com/www/images/press/gl-inet_white.png?_gl=1*1198wrr*_gcl_au*MjAxNDA3MTA4MS4xNzM1OTU4MzE0*_ga*MTMyNzc3MzIzMC4xNzM1OTU4MzE0*_ga_34T6Q5NL0V*MTczNjIzMTA2NS45LjEuMTczNjIzMTA3OC4wLjAuMA.." alt="GL.iNet Logo" class="logo">
+        <h1>ART Update</h1>
+        <p>You are going to update <strong>ART (Atheros Radio Test)</strong> on the device.<br>Please choose a file from your local hard drive and click <strong>Update ART</strong>.</p>
+        <div class="form-container">
+            <form method="post" enctype="multipart/form-data">
+                <input type="file" name="art" required>
+                <input type="submit" value="Update ART">
+            </form>
+        </div>
+        <div class="warning">
+            <strong>WARNINGS</strong>
+            <ul>
+                <li>Do not power off the device during the update.</li>
+                <li>If everything goes well, the device will restart.</li>
+                <li>Ensure you choose the proper ART image for your device.</li>
+            </ul>
+        </div>
+        <a href="index.html" class="btn">Return to Home</a>
+    </div>
+</body>
+</html>
